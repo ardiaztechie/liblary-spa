@@ -1,37 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { NavLink } from "react-router-dom";
 
 function ComponentSideBar() {
-  return (
-    <aside className="main-sidebar sidebar-dark-primary elevation-4">
-      <Link to="/" className="brand-link">
-        <span className="brand-text font-weight-light pl-3">Library SPA</span>
-      </Link>
-
-      <div className="sidebar">
-        <nav className="mt-2">
-          <ul
-            className="nav nav-pills nav-sidebar flex-column"
-            data-widget="treeview"
-            role="menu"
-          >
+    return (
+        <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/#">
+                <div className="sidebar-brand-text mx-3">React Admin</div>
+            </a>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
-                <i className="nav-icon fas fa-tachometer-alt"></i>
-                <p> Dashboard</p>
-              </Link>
+                <NavLink to="/#" className="nav-link">
+                    <i className="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/books" className="nav-link">
-                <i className="nav-icon fas fa-book"></i>
-                <p> Menu Perpus</p>
-              </Link>
+                <a className="nav-link collapsed" href="/#" data-toggle="collapse" data-target="#masterSection" aria-expanded="true" aria-controls="collapseTwo">
+                    <i className="fas fa-fw fa-cog"></i>
+                    <span>Master</span>
+                </a>
+                <div id="masterSection" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div className="bg-white py-2 collapse-inner rounded">
+                        <NavLink to="/book" className="collapse-item">Book</NavLink>
+                        <NavLink to="/borrower" className="collapse-item">Peminjam</NavLink>
+                    </div>
+                </div>
             </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
-  );
+        </ul>
+    );
 }
 
 export default ComponentSideBar;

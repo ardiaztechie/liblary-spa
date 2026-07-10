@@ -2,20 +2,22 @@ import React from "react";
 
 function ComponentHeader() {
   return (
-    <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-      {/* Tombol menu kiri */}
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link" data-widget="pushmenu" href="#" role="button">
-            <i className="fas fa-bars"></i>
-          </a>
-        </li>
-      </ul>
+    <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+      {/* Sidebar Toggle (Topbar) */}
+      <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
+        <i className="fa fa-bars"></i>
+      </button>
 
-      {/* Menu kanan */}
+      {/* Topbar Navbar */}
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <span className="nav-link">Selamat Datang, Admin</span>
+        <div className="topbar-divider d-none d-sm-block"></div>
+
+        {/* Nav Item - User Information */}
+        <li className="nav-item dropdown no-arrow">
+          <a className="nav-link dropdown-toggle" href="/#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span className="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+            <img className="img-profile rounded-circle" src="img/undraw_profile.svg" alt="Profile" />
+          </a>
         </li>
       </ul>
     </nav>

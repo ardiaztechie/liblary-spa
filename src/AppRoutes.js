@@ -1,18 +1,28 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import BookIndex from "./pages/BookIndex";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from './pages/Dashboard';
+import BookIndex from './pages/BookIndex';
+import BookCreate from './pages/BookCreate';
+import BookEdit from './pages/BookEdit';
+import Borrower from './pages/Borrower';
 
-function Dashboard() {
-  return <h1 className="m-0 text-dark">Dashboard Page</h1>;
-}
+const routesConfig = [
+    { path: "/", component: Dashboard },
+    { path: "/book", component: BookIndex },
+    { path: "/book/create", component: BookCreate },
+    { path: "/book/edit/:id", component: BookEdit },
+    { path: "/borrower", component: Borrower },
+];
 
-function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/books" element={<BookIndex />} />
-    </Routes>
-  );
+const AppRoutes = () => {
+    return (
+        <Routes>
+            {routesConfig.map((route, index) => (
+                <Route key={index} path={route.path}
+                element={<route.component />} />
+            ))}
+        </Routes>
+    );
 }
 
 export default AppRoutes;
