@@ -5,6 +5,8 @@ import BookIndex from './pages/BookIndex';
 import BookCreate from './pages/BookCreate';
 import BookEdit from './pages/BookEdit';
 import Borrower from './pages/Borrower';
+import BorrowingIndex from './pages/BorrowingIndex';
+import BorrowingCreate from './pages/BorrowingCreate';
 
 const routesConfig = [
     { path: "/", component: Dashboard },
@@ -12,6 +14,8 @@ const routesConfig = [
     { path: "/book/create", component: BookCreate },
     { path: "/book/edit/:id", component: BookEdit },
     { path: "/borrower", component: Borrower },
+    { path: "/borrowings", component: BorrowingIndex },
+    { path: "/borrowings/create", component: BorrowingCreate },
 ];
 
 const AppRoutes = () => {

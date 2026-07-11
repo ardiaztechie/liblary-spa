@@ -21,7 +21,7 @@ function ComponentSideBar() {
                 <div id="masterSection" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div className="bg-white py-2 collapse-inner rounded">
                         <NavLink to="/book" className="collapse-item">Book</NavLink>
-                        <NavLink to="/borrower" className="collapse-item">Peminjam</NavLink>
+                        <NavLink to="/borrowings" className="collapse-item">Peminjaman</NavLink>
                     </div>
                 </div>
             </li>

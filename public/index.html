@@ -5,18 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>React Admin LTE</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <link rel="stylesheet" href="%PUBLIC_URL%/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/sb-admin-2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        /* Custom Purple Theme Override */
+        .bg-gradient-primary {
+            background-color: #6f42c1 !important;
+            background-image: linear-gradient(180deg, #6f42c1 10%, #59359a 100%) !important;
+            background-size: cover !important;
+        }
+        .text-primary {
+            color: #6f42c1 !important;
+        }
+        .btn-primary {
+            background-color: #6f42c1 !important;
+            border-color: #6f42c1 !important;
+        }
+        .btn-primary:hover {
+            background-color: #59359a !important;
+            border-color: #59359a !important;
+        }
+        .border-left-primary {
+            border-left: .25rem solid #6f42c1 !important;
+        }
+        .sidebar .nav-item .nav-link.active {
+            color: #fff !important;
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   
   <div id="root"></div>
 
-  <script src="%PUBLIC_URL%/vendor/jquery/jquery.min.js"></script>
-  <script src="%PUBLIC_URL%/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="%PUBLIC_URL%/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="%PUBLIC_URL%/js/sb-admin-2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
 </body>
 </html>
